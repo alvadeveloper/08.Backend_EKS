@@ -6,23 +6,23 @@ Description: EKSWSV1
 
 Parameters:
 
-  EksClusterName: jwt
+  EksClusterName: 
     Type: String
     Description: The name of the EKS cluster created
-    Default: 
+    Default: eksctl-jwt-cluster
     MinLength: 1
     MaxLength: 100
     ConstraintDescription: You must enter the EKS cluster name
 
-  GitSourceRepo: EKS
+  GitSourceRepo: 
     Type: String
     Description: GitHub source repository - must contain a Dockerfile and buildspec.yml in the base
-    Default: 
+    Default: EKS
     MinLength: 1
     MaxLength: 100
     ConstraintDescription: You must enter a GitHub repository name
 
-  GitBranch: master
+  GitBranch: 
     Type: String
     Default: master
     Description: GitHub git repository branch - change triggers a new build
@@ -30,7 +30,8 @@ Parameters:
     MaxLength: 100
     ConstraintDescription: You must enter a GitHub repository branch name
 
-  GitHubToken: f2e8274fc10623028c89e7e488cac7d18ee718cf
+  GitHubToken: 
+    Default: f2e8274fc10623028c89e7e488cac7d18ee718cf
     Type: String
     NoEcho: true
     Description: GitHub API token - see https://github.com/blog/1509-personal-api-tokens
@@ -38,15 +39,15 @@ Parameters:
     MaxLength: 100
     ConstraintDescription: You must enter a GitHub personal access token
 
-  GitHubUser: alvadeveloper
+  GitHubUser:
     Type: String
-    Default:
+    Default: alvadeveloper
     Description: GitHub username or organization
     MinLength: 3
     MaxLength: 100
     ConstraintDescription: You must enter a GitHub username or organization
 
-  CodeBuildDockerImage: jwt-api-test
+  CodeBuildDockerImage: 
     Type: String
     Default: aws/codebuild/standard:4.0
     Description: AWS CodeBuild Docker optimized image
@@ -54,9 +55,9 @@ Parameters:
     MaxLength: 100
     ConstraintDescription: You must enter a CodeBuild Docker image
 
-  KubectlRoleName: UdacityFlaskDeployCBKubectlRole
+  KubectlRoleName: 
     Type: String
-    Default: 
+    Default: UdacityFlaskDeployCBKubectlRole
     Description: IAM role used by kubectl to interact with EKS cluster
     MinLength: 3
     MaxLength: 100
