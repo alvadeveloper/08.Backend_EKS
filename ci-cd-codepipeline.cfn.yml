@@ -87,19 +87,19 @@ Metadata:
           - EksClusterName
     ParameterLabels:
       GitHubUser:
-        default: Username
+        default: alvadeveloper
       GitHubToken:
-        default: Access token
+        default: f2e8274fc10623028c89e7e488cac7d18ee718cf
       GitSourceRepo:
-        default: Repository
+        default: EKS
       GitBranch:
-        default: Branch
+        default: master
       CodeBuildDockerImage:
-        default: Docker image
+        default: jwt-api-test
       KubectlRoleName:
-        default: kubectl IAM role
+        default: UdacityFlaskDeployCBKubectlRole
       EksClusterName:
-        default: EKS cluster name
+        default: jwt
 
 
 Resources:
