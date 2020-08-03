@@ -1,6 +1,14 @@
 ---
 version: 0.2
 
+env:
+     parameter-store:         
+       JWT_SECRET: JWT_SECRET
+
+pre_build:
+commands:
+    - pip3 install -r requirements.txt 
+    - python -m pytest test_main.py
 
 phases:
   install:
@@ -39,11 +47,3 @@ phases:
 artifacts:
   files: build.json
 
-env:
-     parameter-store:         
-       JWT_SECRET: JWT_SECRET
-
-pre_build:
-commands:
-    - pip3 install -r requirements.txt 
-    - python -m pytest test_main.py
