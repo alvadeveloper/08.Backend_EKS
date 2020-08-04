@@ -31,7 +31,7 @@ Parameters:
     ConstraintDescription: You must enter a GitHub repository branch name
 
   GitHubToken: 
-    Default: d11392f1743ec858c53b09c44f6d72fd54182439
+    Default: b3a52932663274540fdbeb47aba348e905e81cf2
     Type: String
     NoEcho: true
     Description: GitHub API token - see https://github.com/blog/1509-personal-api-tokens
